@@ -1,0 +1,21 @@
+extends layout
+block content
+
+  nav
+    a( class="nav-element" href="/dashboard") Dashboard
+    if !user
+      
+      a( class="nav-element" href="/login") Login
+    if user
+      a(href="/logout") Logout
+
+  if user
+    div 
+      p Welcome #{user.email}. Go to Dashboard to see what you can do. 
+  else  
+    div 
+      <p> Welcome. Please  <a href="/login">Login</a> to check what you can do. </p>
+
+
+
+  

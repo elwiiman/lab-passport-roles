@@ -1,0 +1,20 @@
+mixin formSignUp(error)
+
+  form(action="/signup" method="POST")
+    div
+      label(for="email") email:
+      input(id="email" type="email" name="email")
+    div
+      label(for="password") password: 
+      input(id="password" type="password" name="password")
+    div
+      label(for="Role") Role: 
+        select(name="role")
+          option(value="TA") TA
+          option(value="developer") Developer
+          option(value="student") Student
+    if error
+      div
+        p #{error}
+    div
+      button(type="submit") Signup

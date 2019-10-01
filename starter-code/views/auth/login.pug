@@ -1,0 +1,9 @@
+extends ../layout
+
+include ../mixins/_formLogin
+
+block content
+  nav
+    a(class="nav-element" href="/") Home
+  h1 Login
+  +formLogin(error)

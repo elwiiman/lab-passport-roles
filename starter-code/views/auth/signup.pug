@@ -1,0 +1,13 @@
+extends ../layout
+
+include ../mixins/_formSignUp
+
+block content
+  nav
+    a(class="nav-element" href="/") Home
+    a(class="nav-element" href="/logout") Logout
+  h1 SIGNUP 
+  +formSignUp(error)
+
+ 
+

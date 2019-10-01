@@ -1,0 +1,14 @@
+mixin formLogin(error)
+
+  form(action="/login" method="POST")
+    div
+      label(for="email") email:
+      input(id="email" type="email" name="email")
+    div
+      label(for="password") password: 
+      input(id="password" type="password" name="password")
+    if error
+      div
+        p #{error}
+    div
+      button(type="submit") Login

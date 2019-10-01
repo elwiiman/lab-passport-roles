@@ -1,0 +1,21 @@
+extends layout
+block content
+
+  nav
+    if user
+      a(href="/logout") Logout
+    else
+       a( class="nav-element" href="/login") Login
+       
+    if user
+      div
+        p Looged as #{user.role}
+        p Welcome #{user.email}. What do you want to do?
+          if user.role === "boss"
+            div
+              a(href="/signup") Sign Employee
+          if user.role === "TA"
+            div
+              a(href="/view-profiles") View Profiles
+
+    
